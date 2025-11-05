@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Health Expert System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        .container {
+            background: white;
+            width: 700px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            text-align: center;
+            color: #1a237e;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p {
+            text-align: center;
+            color: #444;
+        }
+        h3 {
+            margin-top: 30px;
+            color: #283593;
+            border-bottom: 2px solid #c5cae9;
+            padding-bottom: 5px;
+        }
+        label {
+            display: inline-block;
+            width: 45%;
+            margin: 5px 0;
+            color: #333;
+        }
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background: linear-gradient(45deg, #283593, #5c6bc0);
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            background: linear-gradient(45deg, #1a237e, #3949ab);
+        }
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🩺 AI Health Expert System</h1>
+        <p>Select your symptoms below to get a quick diagnosis.</p>
+
+        <form action="/diagnose" method="POST">
+            <h3>🦠 General</h3>
+            <label><input type="checkbox" name="symptoms" value="fever"> Fever</label>
+            <label><input type="checkbox" name="symptoms" value="fatigue"> Fatigue</label>
+            <label><input type="checkbox" name="symptoms" value="headache"> Headache</label>
+            <label><input type="checkbox" name="symptoms" value="chills"> Chills</label>
+            <label><input type="checkbox" name="symptoms" value="dizziness"> Dizziness</label>
+            <label><input type="checkbox" name="symptoms" value="loss of appetite"> Loss of Appetite</label>
+
+            <h3>😷 Respiratory</h3>
+            <label><input type="checkbox" name="symptoms" value="cough"> Cough</label>
+            <label><input type="checkbox" name="symptoms" value="sore throat"> Sore Throat</label>
+            <label><input type="checkbox" name="symptoms" value="runny nose"> Runny Nose</label>
+            <label><input type="checkbox" name="symptoms" value="shortness of breath"> Shortness of Breath</label>
+            <label><input type="checkbox" name="symptoms" value="chest pain"> Chest Pain</label>
+
+            <h3>🤢 Digestive</h3>
+            <label><input type="checkbox" name="symptoms" value="stomach pain"> Stomach Pain</label>
+            <label><input type="checkbox" name="symptoms" value="nausea"> Nausea</label>
+            <label><input type="checkbox" name="symptoms" value="vomiting"> Vomiting</label>
+            <label><input type="checkbox" name="symptoms" value="bloating"> Bloating</label>
+            <label><input type="checkbox" name="symptoms" value="heartburn"> Heartburn</label>
+
+            <h3>🩹 Skin</h3>
+            <label><input type="checkbox" name="symptoms" value="rash"> Rash</label>
+            <label><input type="checkbox" name="symptoms" value="itching"> Itching</label>
+            <label><input type="checkbox" name="symptoms" value="redness"> Redness</label>
+            <label><input type="checkbox" name="symptoms" value="swelling"> Swelling</label>
+
+            <h3>❤️ Body & Muscle</h3>
+            <label><input type="checkbox" name="symptoms" value="body ache"> Body Ache</label>
+            <label><input type="checkbox" name="symptoms" value="muscle pain"> Muscle Pain</label>
+            <label><input type="checkbox" name="symptoms" value="joint pain"> Joint Pain</label>
+            <label><input type="checkbox" name="symptoms" value="back pain"> Back Pain</label>
+
+            <h3>🧠 Neurological</h3>
+            <label><input type="checkbox" name="symptoms" value="confusion"> Confusion</label>
+            <label><input type="checkbox" name="symptoms" value="sleepiness"> Sleepiness</label>
+            <label><input type="checkbox" name="symptoms" value="anxiety"> Anxiety</label>
+            <label><input type="checkbox" name="symptoms" value="difficulty concentrating"> Difficulty Concentrating</label>
+
+            <button class="submit-btn" type="submit">🔍 Get Diagnosis</button>
+        </form>
+
+        <footer>Developed by <b>Shreeya Kalebere</b> | AI Health Expert System © 2025</footer>
+    </div>
+</body>
+</html>
